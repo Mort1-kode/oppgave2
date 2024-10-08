@@ -17,8 +17,17 @@ received is an even number.
 
 ******************************************************************************/
 
+// function evenOrOdd(num) {
+//   if (num % 2 === 0) {
+//     return "Even";
+//   } else {
+//     return "Odd";
+//   }
+// }
+// const result = evenOrOdd(111);
 
-  
+// console.log(result);
+
 /******************************************************************************
 2.
 
@@ -30,7 +39,10 @@ in upper case with an exclamation mark at the end.
 Example: "This is cool" should return "THIS IS COOL!"
 
 ******************************************************************************/
-
+// function toUpperCaseNameWithExclamation(cool) {
+//   return cool.toUpperCase() + "!";
+// }
+// console.log(toUpperCaseNameWithExclamation("This is cool"));
 
 /******************************************************************************
 3.
@@ -54,7 +66,26 @@ If no hour is received, your function should return an error message.
 
 ******************************************************************************/
 
+// function greeting(name, hour) {
+//   if (hour < 0) {
+//     return `invalid time`;
+//   } else if (hour >= 0 && hour < 5) {
+//     return `Good night ${name}`;
+//   } else if (hour >= 6 && hour < 11) {
+//     return `Good morning ${name}`;
+//   } else if (hour >= 12 && hour < 17) {
+//     return `Good day ${name}`;
+//   } else if (hour >= 18 && hour < 23) {
+//     return `Good evening ${name}`;
+//   } else if (hour > 23) {
+//     return `invalid time`;
+//   } else {
+//     return "error";
+//   }
+// }
 
+// let result = greeting("pål", 23);
+// console.log(result);
 
 /******************************************************************************
 4.
@@ -69,9 +100,17 @@ Example 1: ["Red", "Green", "Blue", "Yellow"] should return ["Green", "Blue"]
 Example 2: ["One", "Two", "Three", "Four", "Five", "Six"] should return
 ["Two", "Three", "Four", "Five"]
 ******************************************************************************/
+// const fruits = ["Red", "Green", "Blue", "Yellow"];
+// fruits.pop();
+// fruits.shift();
 
+// console.log(fruits);
 
+// const fruits = ["One", "Two", "Three", "Four", "Five", "Six"];
+// fruits.pop();
+// fruits.shift();
 
+// console.log(fruits);
 /******************************************************************************
 5.
 
@@ -90,8 +129,28 @@ Example2: " It's hard to use methods " should return "It's hard to use methods"
 Example3: "   hard        " should return "fun"
 
 ******************************************************************************/
+//Example1
 
+// let text = "  Javascript is hard   ";
+// let trimmedText = text.trim();
+// let result = trimmedText.replace("hard", "fun");
 
+// console.log("final result", result);
+
+//Example2
+
+// let text = " It's hard to use methods ";
+// let result = text.trim();
+
+// console.log(result);
+
+//Example3
+
+// let text = "   hard        ";
+// let trimmedText = text.trim();
+// let result = trimmedText.replace("hard", "fun");
+
+// console.log(result);
 
 /******************************************************************************
 6.
@@ -105,9 +164,24 @@ Use array methods to do the following:
 
 ******************************************************************************/
 
-const heroes = ["Spider-Man", "Thor", "Hulk", "Doctor Strange", "Iron Man", "Black Widow"]
+// const heroes = [
+//   "Spider-Man",
+//   "Thor",
+//   "Hulk",
+//   "Doctor Strange",
+//   "Iron Man",
+//   "Black Widow",
+// ];
 
+// heroes.shift();
 
+// heroes.splice(2, 1, "Skrull");
+
+// heroes.splice(0, 2, "Captain America");
+
+// const result = heroes.join("💪");
+
+// console.log(result);
 
 /******************************************************************************
 7.
@@ -135,8 +209,14 @@ If the parameter received is any other datatype:
 Return "😎Primitive values only😎"
 
 ******************************************************************************/
+function isString(value) {
+  if (typeof value === `string`) {
+    return "😎" + value + "😎";
+  }
 
-
+  return "not a string";
+}
+console.log(isString("this is string"));
 
 /******************************************************************************
 8.
@@ -160,6 +240,3 @@ Example2: (["Red", "Green", "Blue"], "Green")) --> ["Red", "Blue"]
 Example3: (["One", "Two", "Three"], "Four") --> ["One", "Two", "Three", "Four"]
 Example4: (["One", "Two", "Three"], "Two") --> ["One", "Three"]
 ******************************************************************************/
-
-
-  
